@@ -804,6 +804,18 @@ body[data-view="single"] #view-single{max-width:100vw;}
         </tbody>
       </table>
     </div>
+    <div class="list-card" style="margin-top:18px">
+      <div class="lc-head"><div class="lc-title">Top Blogs (period)</div><button class="lc-link">View all ›</button></div>
+      <table>
+        <thead><tr><th>Article</th><th>Author</th><th>Views</th><th>Reactions</th><th>Comments</th></tr></thead>
+        <tbody>
+          <tr><td style="max-width:280px"><div class="td-name" style="white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:280px">Design systems that scale with your team</div></td><td>Maya R.</td><td>1,204</td><td>96</td><td>38</td></tr>
+          <tr><td><div class="td-name" style="white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:280px">Hiring your first product manager</div></td><td>Dev P.</td><td>982</td><td>74</td><td>51</td></tr>
+          <tr><td><div class="td-name" style="white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:280px">Vite vs Webpack in 2026 — an honest take after 3 years</div></td><td>Leo M.</td><td>877</td><td>112</td><td>64</td></tr>
+          <tr><td><div class="td-name" style="white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:280px">The community-led growth playbook</div></td><td>Sara K.</td><td>641</td><td>58</td><td>27</td></tr>
+        </tbody>
+      </table>
+    </div>
   </div>
 
   <!-- ══ COURSES & EVENTS ══ -->
@@ -955,7 +967,7 @@ body[data-view="single"] #view-single{max-width:100vw;}
     </div>
     <div class="stat-card">
       <div class="sc-top"><div class="sc-label">Open Reports <span class="sc-scope">now</span></div><button class="info-btn"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="8" stroke-width="3" stroke-linecap="round"/><line x1="12" y1="11" x2="12" y2="17"/></svg><span class="tip">Unresolved rows in <code>content_report</code>. Current snapshot. Requires a <code>status</code> field to be added to the schema.</span></button></div>
-      <div class="sc-val">7</div>
+      <div class="sc-val" id="sp-mod-count">7</div>
       <div class="sc-trend warn"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/></svg>2 high priority</div>
     </div>
   </div>
@@ -984,6 +996,40 @@ body[data-view="single"] #view-single{max-width:100vw;}
     <div class="stat-card"><div class="sc-top"><div class="sc-label">Reactions</div><button class="info-btn"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="8" stroke-width="3" stroke-linecap="round"/><line x1="12" y1="11" x2="12" y2="17"/></svg><span class="tip">All <code>reaction</code> rows in the selected period, across posts, comments, and messages.</span></button></div><div class="sc-val" id="sp-reactions">4,291</div><div class="sc-trend up" id="sp-reactions-t"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 15l-6-6-6 6"/></svg>+31% vs prev period</div></div>
     <div class="stat-card"><div class="sc-top"><div class="sc-label">Active Subs <span class="sc-scope">now</span></div><button class="info-btn"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="8" stroke-width="3" stroke-linecap="round"/><line x1="12" y1="11" x2="12" y2="17"/></svg><span class="tip">Subscriptions with <code>status = active</code> across all billing cycles (monthly &amp; yearly). Current snapshot.</span></button></div><div class="sc-val">384</div><div class="sc-trend up"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 15l-6-6-6 6"/></svg>+29 net new</div></div>
     <div class="stat-card"><div class="sc-top"><div class="sc-label">DAU <span class="sc-scope">7d avg</span></div><button class="info-btn"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="8" stroke-width="3" stroke-linecap="round"/><line x1="12" y1="11" x2="12" y2="17"/></svg><span class="tip">Daily Active Users averaged over the last 7 days (rolling). Ignores the date range.</span></button></div><div class="sc-val">287</div><div class="sc-trend up"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 15l-6-6-6 6"/></svg>+6% vs prior 7d</div></div>
+  </div>
+
+  <!-- open reports queue -->
+  <div class="content-row">
+    <div class="list-card">
+      <div class="lc-head"><div class="lc-title">Open Reports Queue</div><button class="lc-link">View resolved ›</button></div>
+      <div id="rq-list-sp">
+        <div class="rq-item">
+          <div class="rq-icon" style="background:var(--red-soft);color:var(--red)"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/></svg></div>
+          <div class="rq-body">
+            <div class="rq-title-row"><div class="rq-title">Post flagged for spam</div><span class="bdg red">High priority</span></div>
+            <div class="rq-meta">Reported by 3 members · in Founders Roundtable · 14 min ago</div>
+            <div class="rq-preview">"Check out my new investment opportunity — guaranteed returns…"</div>
+            <div class="rq-actions"><button class="btn-sm danger">Remove post</button><button class="btn-sm warn">Suspend member</button><button class="btn-sm ghost">Dismiss</button></div>
+          </div>
+        </div>
+        <div class="rq-item">
+          <div class="rq-icon" style="background:var(--amber-soft);color:var(--amber)"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/></svg></div>
+          <div class="rq-body">
+            <div class="rq-title-row"><div class="rq-title">Comment — harassment report</div><span class="bdg amber">Medium priority</span></div>
+            <div class="rq-meta">Reported by 1 member · in Design Dynamics · 2 hours ago</div>
+            <div class="rq-actions"><button class="btn-sm danger">Reject comment</button><button class="btn-sm ghost">Dismiss</button></div>
+          </div>
+        </div>
+        <div class="rq-item">
+          <div class="rq-icon" style="background:#f0f0f5;color:var(--muted)"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/></svg></div>
+          <div class="rq-body">
+            <div class="rq-title-row"><div class="rq-title">Post — off-topic self-promotion</div><span class="bdg grey">Low priority</span></div>
+            <div class="rq-meta">Reported by 1 member · in Creative Strategy Lab · 5 hours ago</div>
+            <div class="rq-actions"><button class="btn-sm danger">Remove post</button><button class="btn-sm ghost">Dismiss</button></div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 
   <!-- what's selling -->
@@ -1430,37 +1476,43 @@ function showToast(msg,onUndo){
   clearTimeout(toastTimer);toastTimer=setTimeout(()=>{wrap.innerHTML='';},5000);
 }
 
-/* ── moderation actions (confirm + undo) ── */
-let modCount=7;
+/* ── moderation actions (confirm + undo) — shared by both layouts' queues ── */
+const modCounts={'rq-list':7,'rq-list-sp':7};
 function updateModBadges(){
+  const m=modCounts['rq-list'];
   const b=g('mod-badge'),c=g('mod-count');
-  if(c)c.textContent=modCount;
-  if(b){if(modCount===0){b.style.display='none';}else{b.style.display='';b.textContent=modCount;}}
+  if(c)c.textContent=m;
+  if(b){if(m===0){b.style.display='none';}else{b.style.display='';b.textContent=m;}}
+  const s=g('sp-mod-count');if(s)s.textContent=modCounts['rq-list-sp'];
 }
-function removeItem(item,label){
+function removeItem(item,label,listId){
   const parent=item.parentNode,next=item.nextElementSibling;
   item.style.opacity='0';
   setTimeout(()=>{
     if(item.parentNode)item.parentNode.removeChild(item);
-    modCount=Math.max(0,modCount-1);updateModBadges();
+    modCounts[listId]=Math.max(0,modCounts[listId]-1);updateModBadges();
     showToast(`${label} applied`,()=>{
       if(next&&next.parentNode===parent)parent.insertBefore(item,next);else parent.appendChild(item);
-      item.style.opacity='1';modCount+=1;updateModBadges();
+      item.style.opacity='1';modCounts[listId]+=1;updateModBadges();
     });
   },260);
 }
-g('rq-list')?.addEventListener('click',e=>{
-  const btn=e.target.closest('.btn-sm');if(!btn)return;
-  const item=btn.closest('.rq-item');if(!item)return;
-  const action=btn.textContent.trim();
-  const title=item.querySelector('.rq-title')?.textContent||'this item';
-  if(/Remove|Suspend|Reject/i.test(action)){
-    const extra=/Suspend/i.test(action)?' The member will be unable to log in until reinstated.':' It will be hidden from members.';
-    openConfirm(action+'?',`${action} — "${title}".${extra} You can undo from the toast.`,()=>removeItem(item,action));
-  }else{
-    removeItem(item,action);
-  }
-});
+function wireQueue(listId){
+  g(listId)?.addEventListener('click',e=>{
+    const btn=e.target.closest('.btn-sm');if(!btn)return;
+    const item=btn.closest('.rq-item');if(!item)return;
+    const action=btn.textContent.trim();
+    const title=item.querySelector('.rq-title')?.textContent||'this item';
+    if(/Remove|Suspend|Reject/i.test(action)){
+      const extra=/Suspend/i.test(action)?' The member will be unable to log in until reinstated.':' It will be hidden from members.';
+      openConfirm(action+'?',`${action} — "${title}".${extra} You can undo from the toast.`,()=>removeItem(item,action,listId));
+    }else{
+      removeItem(item,action,listId);
+    }
+  });
+}
+wireQueue('rq-list');
+wireQueue('rq-list-sp');
 
 /* ── keyboard ── */
 document.addEventListener('keydown',e=>{if(e.key==='Escape'){closePicker();closeConfirm();}});
