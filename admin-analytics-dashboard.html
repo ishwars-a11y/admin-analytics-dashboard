@@ -537,11 +537,11 @@ body[data-view="single"] #view-single{max-width:100vw;}
       </div>
       <div class="stat-card">
         <div class="sc-top">
-          <div class="sc-label">Posts</div>
-          <button class="info-btn"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="8" stroke-width="3" stroke-linecap="round"/><line x1="12" y1="11" x2="12" y2="17"/></svg><span class="tip">Total posts created in the selected period, across all types: text, image, video, poll, GIF, link preview, doc.</span></button>
+          <div class="sc-label">Unique Visitors</div>
+          <button class="info-btn"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="8" stroke-width="3" stroke-linecap="round"/><line x1="12" y1="11" x2="12" y2="17"/></svg><span class="tip">Distinct visitors to the community's public landing page in the selected period, deduplicated by device/session (not page views). Sourced from the web-analytics pipeline, not the community DB.</span></button>
         </div>
-        <div class="sc-val" id="ov-posts">617</div>
-        <div class="sc-trend up" id="ov-posts-t"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 15l-6-6-6 6"/></svg>+18% vs prev period</div>
+        <div class="sc-val" id="ov-visitors">12,480</div>
+        <div class="sc-trend up" id="ov-visitors-t"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 15l-6-6-6 6"/></svg>+16% vs prev period</div>
       </div>
       <div class="stat-card">
         <div class="sc-top">
@@ -748,8 +748,8 @@ body[data-view="single"] #view-single{max-width:100vw;}
     </div>
     <div class="stat-row s6">
       <div class="stat-card">
-        <div class="sc-top"><div class="sc-label">Posts</div><button class="info-btn"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="8" stroke-width="3" stroke-linecap="round"/><line x1="12" y1="11" x2="12" y2="17"/></svg><span class="tip">Posts created in the period via <code>post.date_created</code>. Covers all <code>post_type</code> values: text, image, video_upload, poll, gif, link_preview, doc, audio.</span></button></div>
-        <div class="sc-val" id="eng-posts">617</div><div class="sc-trend up" id="eng-posts-t"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 15l-6-6-6 6"/></svg>+18% vs prev period</div>
+        <div class="sc-top"><div class="sc-label">Unique Visitors</div><button class="info-btn"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="8" stroke-width="3" stroke-linecap="round"/><line x1="12" y1="11" x2="12" y2="17"/></svg><span class="tip">Distinct visitors to the community's public landing page in the selected period, deduplicated by device/session (not page views). Sourced from the web-analytics pipeline, not the community DB.</span></button></div>
+        <div class="sc-val" id="eng-visitors">12,480</div><div class="sc-trend up" id="eng-visitors-t"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 15l-6-6-6 6"/></svg>+16% vs prev period</div>
       </div>
       <div class="stat-card">
         <div class="sc-top"><div class="sc-label">Comments</div><button class="info-btn"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="8" stroke-width="3" stroke-linecap="round"/><line x1="12" y1="11" x2="12" y2="17"/></svg><span class="tip">Comments created in the period via <code>post_comment.date_created</code>. Includes top-level comments and nested replies (parent field). Excluded: rejected comments.</span></button></div>
@@ -961,9 +961,9 @@ body[data-view="single"] #view-single{max-width:100vw;}
       <div class="sc-trend up"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 15l-6-6-6 6"/></svg>+246 this month</div>
     </div>
     <div class="stat-card">
-      <div class="sc-top"><div class="sc-label">Posts</div><button class="info-btn"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="8" stroke-width="3" stroke-linecap="round"/><line x1="12" y1="11" x2="12" y2="17"/></svg><span class="tip">Posts created in the selected period, across all types: text, image, video, poll, GIF, link preview, doc.</span></button></div>
-      <div class="sc-val" id="sp-posts">617</div>
-      <div class="sc-trend up" id="sp-posts-t"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 15l-6-6-6 6"/></svg>+18% vs prev period</div>
+      <div class="sc-top"><div class="sc-label">Unique Visitors</div><button class="info-btn"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="8" stroke-width="3" stroke-linecap="round"/><line x1="12" y1="11" x2="12" y2="17"/></svg><span class="tip">Distinct visitors to the community's public landing page in the selected period, deduplicated by device/session (not page views). Sourced from the web-analytics pipeline, not the community DB.</span></button></div>
+      <div class="sc-val" id="sp-visitors">12,480</div>
+      <div class="sc-trend up" id="sp-visitors-t"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 15l-6-6-6 6"/></svg>+16% vs prev period</div>
     </div>
     <div class="stat-card">
       <div class="sc-top"><div class="sc-label">Open Reports <span class="sc-scope">now</span></div><button class="info-btn"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="8" stroke-width="3" stroke-linecap="round"/><line x1="12" y1="11" x2="12" y2="17"/></svg><span class="tip">Unresolved rows in <code>content_report</code>. Current snapshot. Requires a <code>status</code> field to be added to the schema.</span></button></div>
@@ -1153,6 +1153,7 @@ body[data-view="single"] #view-single{max-width:100vw;}
         <li>Subscriptions: <code>subscription.status</code>, <code>billing_cycle</code>, join to <code>plan</code> for pricing</li>
         <li>Courses: <code>course_enrollment.completion_percentage</code>, <code>access_status</code>, <code>cert_issued_at</code></li>
         <li>Moderation: <code>content_report</code> (needs <code>status</code> field), <code>post_comment.is_rejected</code>, <code>directus_users.status = suspended</code></li>
+        <li>Unique Visitors: <strong>external web-analytics pipeline</strong> (landing page), deduplicated by device/session — <em>not in Directus</em>. Requires the analytics integration; expose a daily <code>landing_visits</code> snapshot for the time-series.</li>
       </ul>
     </div>
     <div class="impl-card">
@@ -1285,9 +1286,9 @@ const D={
   posts:   [12,18,14,22,16,19,25,11,20,17,23,15,28,21,18,24,16,30,22,19,27,14,33,25,17,29,21,35,23,28],
   comments:[28,42,35,58,39,47,63,27,51,44,59,38,71,53,46,62,41,78,56,48,69,36,84,64,43,74,54,89,60,72],
 };
-const AVG={newMembers:9.46,revenue:216.7,posts:23.73,comments:60.88,reactions:165.04,polls:13.15,saves:34.27,dms:81.08,orders:1.462,refunds:5.73,rejected:.885};
-const THIS_MONTH={newMembers:246,revenue:5634,posts:617,comments:1583,reactions:4291,polls:342,saves:891,dms:2108,orders:38,ordersFailed:2,refunds:149,refundsCount:1,rejected:23};
-const THIS_MONTH_PCT={newMembers:23,revenue:23,posts:18,comments:22,reactions:31,polls:9,saves:14,dms:8,orders:12,refunds:-34,rejected:-15};
+const AVG={newMembers:9.46,revenue:216.7,posts:23.73,comments:60.88,reactions:165.04,polls:13.15,saves:34.27,dms:81.08,orders:1.462,refunds:5.73,rejected:.885,visitors:480};
+const THIS_MONTH={newMembers:246,revenue:5634,posts:617,comments:1583,reactions:4291,polls:342,saves:891,dms:2108,orders:38,ordersFailed:2,refunds:149,refundsCount:1,rejected:23,visitors:12480};
+const THIS_MONTH_PCT={newMembers:23,revenue:23,posts:18,comments:22,reactions:31,polls:9,saves:14,dms:8,orders:12,refunds:-34,rejected:-15,visitors:16};
 
 /* ── date ranges ── */
 const BASE_END=new Date(2026,5,26);
@@ -1350,7 +1351,7 @@ function computeVals(r){
   const arr={newMembers:genArr(r,'newMembers',0),revenue:genArr(r,'revenue',0),posts:genArr(r,'posts',0),comments:genArr(r,'comments',0)};
   const tot={newMembers:sum(arr.newMembers),revenue:sum(arr.revenue),posts:sum(arr.posts),comments:sum(arr.comments),
     reactions:scalar(r,'reactions'),polls:scalar(r,'polls'),saves:scalar(r,'saves'),dms:scalar(r,'dms'),
-    orders:scalar(r,'orders'),refunds:scalar(r,'refunds'),rejected:scalar(r,'rejected')};
+    orders:scalar(r,'orders'),refunds:scalar(r,'refunds'),rejected:scalar(r,'rejected'),visitors:scalar(r,'visitors')};
   const pct={};
   Object.keys(tot).forEach(k=>pct[k]=pctOf(r,k,tot[k]));
   const ordersFailed=Math.min(tot.orders,Math.round(tot.orders*0.06));
@@ -1363,7 +1364,7 @@ const TS_CHARTS=['chart-ov-members','chart-ov-revenue','chart-mem-signups','char
 let renderToken=0;
 function renderRange(r){
   const v=computeVals(r);
-  setText('ov-posts',v.posts.toLocaleString());applyTrend('ov-posts-t',v.pct.posts);
+  setText('ov-visitors',v.visitors.toLocaleString());applyTrend('ov-visitors-t',v.pct.visitors);
   setText('ov-rev','$'+v.revenue.toLocaleString());applyTrend('ov-rev-t',v.pct.revenue);
   setText('ov-mbig',v.newMembers.toLocaleString());setDelta('ov-mbig-d',v.pct.newMembers);
   setText('ov-rbig','$'+v.revenue.toLocaleString());setDelta('ov-rbig-d',v.pct.revenue);
@@ -1371,14 +1372,14 @@ function renderRange(r){
   setText('rev-orders',v.orders.toLocaleString());setOrders('rev-orders-t',v.ordersPaid,v.ordersFailed);
   setText('rev-refunds','$'+v.refunds.toLocaleString());applyTrend('rev-refunds-t',v.pct.refunds,true,`${v.refundsCount} refund${v.refundsCount!==1?'s':''}`);
   setText('rev-big','$'+v.revenue.toLocaleString());setDelta('rev-big-d',v.pct.revenue);
-  [['eng-posts','posts'],['eng-comments','comments'],['eng-reactions','reactions'],['eng-polls','polls'],['eng-saves','saves'],['eng-dms','dms']].forEach(([id,k])=>{
+  [['eng-visitors','visitors'],['eng-comments','comments'],['eng-reactions','reactions'],['eng-polls','polls'],['eng-saves','saves'],['eng-dms','dms']].forEach(([id,k])=>{
     setText(id,v[k].toLocaleString());applyTrend(id+'-t',v.pct[k]);
   });
   setText('mod-rejected',v.rejected.toLocaleString());applyTrend('mod-rejected-t',v.pct.rejected,true,`${v.rejected} in period`);
   /* single-page view */
   setText('sp-members',v.newMembers.toLocaleString());applyTrend('sp-members-t',v.pct.newMembers);
   setText('sp-rev','$'+v.revenue.toLocaleString());applyTrend('sp-rev-t',v.pct.revenue);
-  setText('sp-posts',v.posts.toLocaleString());applyTrend('sp-posts-t',v.pct.posts);
+  setText('sp-visitors',v.visitors.toLocaleString());applyTrend('sp-visitors-t',v.pct.visitors);
   setText('sp-comments',v.comments.toLocaleString());applyTrend('sp-comments-t',v.pct.comments);
   setText('sp-reactions',v.reactions.toLocaleString());applyTrend('sp-reactions-t',v.pct.reactions);
   setText('sp-mbig',v.newMembers.toLocaleString());setDelta('sp-mbig-d',v.pct.newMembers);
